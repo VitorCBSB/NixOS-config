@@ -141,7 +141,7 @@
        dropbox
        libva-utils
        musescore
-       mpv
+       vlc
        qbittorrent
        spotify
        rusty-path-of-building
