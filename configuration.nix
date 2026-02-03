@@ -147,6 +147,7 @@
        spotify
        rusty-path-of-building
        libreoffice
+       gimp
     ];
 
     # Variables needed to make Nvidia function with stuff
