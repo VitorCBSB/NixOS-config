@@ -148,6 +148,7 @@
        rusty-path-of-building
        libreoffice
        gimp
+       lutris
     ];
 
     # Variables needed to make Nvidia function with stuff
