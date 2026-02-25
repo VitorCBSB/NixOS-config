@@ -149,6 +149,7 @@
        libreoffice
        gimp
        lutris
+       pdfarranger
     ];
 
     # Variables needed to make Nvidia function with stuff
