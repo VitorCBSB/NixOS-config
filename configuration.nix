@@ -146,7 +146,6 @@
        qbittorrent
        spotify
        rusty-path-of-building
-       libreoffice
        gimp
        lutris
        pdfarranger
