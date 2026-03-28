@@ -14,8 +14,14 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/f43c8d35-c728-4881-950e-baf5a24fbb9b";
+    { device = "/dev/disk/by-uuid/ce403e74-faa3-4e17-9041-70e68b04e975";
       fsType = "ext4";
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/AFB6-3259";
+      fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   fileSystems."/home/vitorc/SteamGames" = 
