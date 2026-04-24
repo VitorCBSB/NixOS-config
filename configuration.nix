@@ -147,7 +147,6 @@
        spotify
        rusty-path-of-building
        gimp
-       lutris
        pdfarranger
     ];
 
