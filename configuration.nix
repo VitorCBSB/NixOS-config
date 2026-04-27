@@ -162,6 +162,16 @@
     };
   };
 
+  environment.etc."openfortivpn/config".text = ''
+  host = vpnexterno.mpf.mp.br
+  port = 443
+  username = vitorcoimbra@mpf.mp.br
+
+  ca-file = /home/vitorc/certs/MPF_cadeia_completa.pem
+  user-cert = /home/vitorc/certs/vitorcoimbra-cert.pem
+  user-key = /home/vitorc/certs/vitorcoimbra-key.pem
+  '';
+
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
