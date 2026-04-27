@@ -148,6 +148,8 @@
        rusty-path-of-building
        gimp
        pdfarranger
+       openssl
+       openfortivpn
     ];
 
     # Variables needed to make Nvidia function with stuff
