@@ -104,6 +104,7 @@
     packages = with pkgs; [
       kdePackages.kate
       kdePackages.kcalc
+      kdePackages.xdg-desktop-portal-kde
     #  thunderbird
     ];
   };
@@ -126,6 +127,15 @@
 
   # Install git
   programs.git.enable = true;
+
+  # Install obs-studio
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-pipewire-audio-capture
+    ];
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -224,6 +234,11 @@
     };
     settings.auto-optimise-store = true;
     settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
+  # XDG portal enabling
+  xdg.portal = {
+    enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
