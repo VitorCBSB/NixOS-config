@@ -137,6 +137,12 @@
     ];
   };
 
+  # Install nh
+  programs.nh = {
+    enable = true;
+    flake = "/home/vitorc/NixOS-config";
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
