@@ -166,6 +166,7 @@
        pdfarranger
        openssl
        openfortivpn
+       wine64Packages.stagingFull
     ];
 
     # Variables needed to make Nvidia function with stuff
@@ -245,6 +246,29 @@
   # XDG portal enabling
   xdg.portal = {
     enable = true;
+  };
+
+  # Define service for my vilareader program.
+  systemd.services.vilareader = {
+    description = "Run my laundry service program.";
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "/home/vitorc/vilareader/result/bin/vilareader";
+      WorkingDirectory = "/home/vitorc/vilareader";
+      User = "vitorc";
+    };
+  };
+
+  systemd.timers.vilareader = {
+    description = "Daily timer for vilareader.";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnCalendar = "*-*-* 08:00:00";
+      Persistent = true;
+      Unit = "vilareader.service";
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
