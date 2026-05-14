@@ -166,7 +166,6 @@
        pdfarranger
        openssl
        openfortivpn
-       wine64Packages.stagingFull
     ];
 
     # Variables needed to make Nvidia function with stuff
@@ -253,6 +252,7 @@
     description = "Run my laundry service program.";
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];
+    requires = [ "network-online.target" ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "/home/vitorc/vilareader/result/bin/vilareader";
