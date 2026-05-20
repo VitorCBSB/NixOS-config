@@ -248,11 +248,8 @@
   };
 
   # Define service for my vilareader program.
-  systemd.services.vilareader = {
+  systemd.user.services.vilareader = {
     description = "Run my laundry service program.";
-    after = [ "network-online.target" ];
-    wants = [ "network-online.target" ];
-    requires = [ "network-online.target" ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "/home/vitorc/vilareader/result/bin/vilareader";
