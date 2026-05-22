@@ -258,7 +258,7 @@
     };
   };
 
-  systemd.timers.vilareader = {
+  systemd.user.timers.vilareader = {
     description = "Daily timer for vilareader.";
     wantedBy = [ "timers.target" ];
     timerConfig = {
