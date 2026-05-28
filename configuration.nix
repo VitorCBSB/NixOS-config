@@ -254,6 +254,8 @@
       Type = "oneshot";
       ExecStart = "/home/vitorc/vilareader/result/bin/vilareader";
       WorkingDirectory = "/home/vitorc/vilareader";
+      Restart = "on-failure";
+      RestartSec = "5s";
       User = "vitorc";
     };
   };
