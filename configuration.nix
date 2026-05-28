@@ -258,6 +258,10 @@
       RestartSec = "5s";
       User = "vitorc";
     };
+    unitConfig = {
+      StartLimitIntervalSec = "300s";
+      StartLimitBurst = 5;
+    };
   };
 
   systemd.user.timers.vilareader = {
