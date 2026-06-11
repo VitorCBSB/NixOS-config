@@ -2,7 +2,7 @@
   description = "Configuration flake for my machine.";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz";
   };
 
   outputs = { self, nixpkgs, ... } @inputs: 
