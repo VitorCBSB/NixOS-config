@@ -264,15 +264,17 @@
     };
   };
 
-  systemd.user.timers.vilareader = {
-    description = "Daily timer for vilareader.";
-    wantedBy = [ "timers.target" ];
-    timerConfig = {
-      OnCalendar = "*-*-* 08:00:00";
-      Persistent = true;
-      Unit = "vilareader.service";
-    };
-  };
+  # Commented out because a new one is needed, need to wait
+  # for a few things before uncommenting
+  #systemd.user.timers.vilareader = {
+  #  description = "Daily timer for vilareader.";
+  #  wantedBy = [ "timers.target" ];
+  #  timerConfig = {
+  #    OnCalendar = "*-*-* 08:00:00";
+  #    Persistent = true;
+  #    Unit = "vilareader.service";
+  #  };
+  #};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
