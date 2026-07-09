@@ -166,6 +166,8 @@
        pdfarranger
        openssl
        openfortivpn
+       heroic
+       cutter
     ];
 
     # Variables needed to make Nvidia function with stuff
