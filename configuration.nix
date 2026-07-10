@@ -157,7 +157,7 @@
        maestral
        maestral-gui
        libva-utils
-       musescore
+       #musescore
        vlc
        qbittorrent
        spotify
