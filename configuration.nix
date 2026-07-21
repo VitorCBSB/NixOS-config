@@ -169,6 +169,7 @@
        heroic
        cutter
        qdirstat
+       libnotify
     ];
 
     # Variables needed to make Nvidia function with stuff
@@ -250,35 +251,25 @@
     enable = true;
   };
 
-  # Define service for my vilareader program.
-  systemd.user.services.vilareader = {
-    description = "Run my laundry service program.";
+  # Define service for my laundry reminder program.
+  systemd.user.services.lavanderia-reminder = {
+    description = "Desktop notification to remind me to grab a slot for my laundry";
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "/home/vitorc/vilareader/result/bin/vilareader";
-      WorkingDirectory = "/home/vitorc/vilareader";
-      Restart = "on-failure";
-      RestartSec = "5s";
-      User = "vitorc";
-    };
-    unitConfig = {
-      StartLimitIntervalSec = "300s";
-      StartLimitBurst = 5;
+      ExecStart = "${pkgs.libnotify}/bin/notify-send --expire-time=0 'Lavanderia' 'Lembrete: Pegar uma vaga na lavanderia!!'";
     };
   };
 
-  # Commented out because a new one is needed, need to wait
-  # for a few things before uncommenting
-  #systemd.user.timers.vilareader = {
-  #  description = "Daily timer for vilareader.";
-  #  wantedBy = [ "timers.target" ];
-  #  timerConfig = {
-  #    OnCalendar = "*-*-* 08:00:00";
-  #    Persistent = true;
-  #    Unit = "vilareader.service";
-  #  };
-  #};
-
+  systemd.user.timers.lavanderia-reminder-timer = {
+    description = "Timer for lavanderia reminder every Friday at 6 AM";
+    timerConfig = {
+      OnCalendar = "Fri *-*-* 06:00:00";
+      Persistent = true;
+      Unit = "lavanderia-reminder.service";
+    };
+    wantedBy = [ "timers.target" ];
+  };
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
