@@ -185,8 +185,8 @@
   };
 
   environment.etc."openfortivpn/config".text = ''
-  host = vpnexterno.mpf.mp.br
-  port = 443
+  host = acesso-lapa.mpf.mp.br
+  port = 11443
   username = vitorcoimbra@mpf.mp.br
 
   ca-file = /home/vitorc/certs/MPF_cadeia_completa.pem
