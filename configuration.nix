@@ -172,6 +172,7 @@
        qdirstat
        libnotify
        xdg-desktop-portal
+       telegram-desktop
     ];
 
     # Variables needed to make Nvidia function with stuff
