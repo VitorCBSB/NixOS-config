@@ -173,6 +173,7 @@
        libnotify
        xdg-desktop-portal
        telegram-desktop
+       zoom-us
     ];
 
     # Variables needed to make Nvidia function with stuff
