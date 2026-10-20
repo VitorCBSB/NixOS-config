@@ -158,17 +158,17 @@
        maestral
        maestral-gui
        libva-utils
-       musescore
+       #musescore
        vlc
        qbittorrent
        spotify
        rusty-path-of-building
        gimp
        pdfarranger
+       #cutter
        openssl
        openfortivpn
        heroic
-       cutter
        qdirstat
        libnotify
        xdg-desktop-portal
