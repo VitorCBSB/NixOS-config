@@ -155,8 +155,7 @@
        neovim
        discord
        keepassxc
-       maestral
-       maestral-gui
+       dropbox
        libva-utils
        #musescore
        vlc
