@@ -157,7 +157,7 @@
        keepassxc
        dropbox
        libva-utils
-       #musescore
+       musescore
        vlc
        qbittorrent
        spotify
